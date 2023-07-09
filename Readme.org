@@ -1,0 +1,28 @@
+#+TITLE: A Working demo of my npm library "csp-with-ts"
+#+AUTHOR: Shounak Bhattacharya
+* Introduction
+The purpose of this repository and code-base is to serve as a show-case, and documentation for an open-source npm library I have written called "csp-with-ts". At the time I began writing this library, there was no CSP library that could be easily used on a React+Typescript project. So, I decided to undertake a dangerous mission... write code you can't find in Medium articles. Against all odds, and my shortcomings, I was fairly successful, and was able to use it in my workplace with the intended effect. However, till recently, there was no documentation or working examples to talk about this library. This is my attempt to remedy that.
+** Inspiration
+   Having learnt Clojure/script on my own time, I had always been incredibly impressed with their core.async library. This in turn was inspired by Go's goroutines. When I was writing this library, I very liberally copie...*cough* /took inspiration from/ both the source code of the original core.async implementation, and this wonderful [[https://github.com/js-csp/js-csp][Javascript implementation]] that I was unfortunately unable to get working in my typescript codebase. I took some liberties with both the interface presented to the user as well as the implementation, preferring to use generators over callbacks as the main job dispatch system, but the library overall is highly derivative of the original core.async library for Clojurescript (Clojure's version is much more complex given that it works in a multi-threaded JVM context unlike the relatively easier single-threaded constraint).
+** Communicating Sequential Processes
+Quoting Wikipedia
+#+begin_quote
+In computer science, communicating sequential processes (CSP) is a formal language for describing patterns of interaction in concurrent systems. It is a member of the family of mathematical theories of concurrency known as process algebras, or process calculi, based on message passing via channels.
+#+end_quote
+Of importance in this approach is the concept of channels, the operations on channels, and... that's it.
+** Differences in Approach
+* Concepts
+** The Channel
+*** Buffer
+*** Transducers
+** The Process.
+*** Go
+*** Loop
+** Operation Primitives
+*** Take
+*** Put
+*** Alt/Select
+* Use cases
+** Select between multiple simultaneously firing sources.
+** Event sourcing
+** Drag and Drop
